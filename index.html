@@ -342,22 +342,21 @@
             text-align: left;
         }
         .project-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 40px;
             position: relative;
-            width: 100%;
+            margin-bottom: 40px;
         }
+
         .project-details {
-            flex: 3;
+            width: 60%;
+            padding-right: 20px;
         }
+
         .project-thumbnail {
             position: absolute;
-            right: -250px; /* 이미지가 텍스트와 겹치지 않도록 오른쪽으로 이동 */
-            top: 0;
-            width: 50%;
+            right: 0;
+            top: 20px; /* 추가: 썸네일을 더 아래로 이동 */
         }
+
         .project-thumbnail img {
             width: 100%;
             height: auto;
