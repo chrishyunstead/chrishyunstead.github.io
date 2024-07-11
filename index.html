@@ -345,18 +345,18 @@
             position: relative;
         }
         .project-details {
-            flex: 1;
+            flex: 3;
         }
         .project-thumbnail {
             position: absolute;
-            right: 0;
+            right: -250px; /* 이미지가 텍스트와 겹치지 않도록 오른쪽으로 이동 */
             top: 0;
             width: 50%;
         }
         .project-thumbnail img {
             width: 100%;
             height: auto;
-            max-width: 500px;
+            max-width: 400px;
             object-fit: cover;
         }
     </style>
@@ -488,7 +488,7 @@
             </div>
             <div class="project-thumbnail">
                 <a href="https://github.com/chrishyunstead/second_project" target="_blank">
-                    <img src="OOF_배경화면.jpg" alt="Project Thumbnail">
+                    <img src="https://github.com/chrishyunstead/second_project/blob/main/OOF_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4.jpg?raw=true" alt="Project Thumbnail">
                 </a>
             </div>
         </div>
