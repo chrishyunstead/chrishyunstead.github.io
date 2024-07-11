@@ -14,12 +14,14 @@
 <!--        }-->
 <!--        main {-->
 <!--            width: 100%;-->
-<!--            margin: 0 auto;-->
-<!--            padding: 20px;-->
+<!--            margin: 0;-->
+<!--            padding: 40px;-->
+<!--            /*display: flex;*/-->
+<!--            /*flex-direction: column;*/-->
+<!--            /*align-items: flex-start; !* 왼쪽 정렬 *!*/-->
 <!--        }-->
 <!--        section {-->
 <!--            margin-bottom: 40px;-->
-<!--            /*padding-left: 20px;*/-->
 <!--        }-->
 <!--        h2 {-->
 <!--            font-size: 24px;-->
@@ -29,6 +31,8 @@
 <!--            margin-bottom: 20px;-->
 <!--            display: flex;-->
 <!--            align-items: center;-->
+<!--            width: 100%;-->
+<!--            /*max-width: 800px; !* 썸네일까지의 길이 *!*/-->
 <!--        }-->
 <!--        h3 {-->
 <!--            font-weight: bold;-->
@@ -61,10 +65,11 @@
 <!--        #about-contact-wrapper {-->
 <!--            display: flex;-->
 <!--            justify-content: space-between;-->
+<!--            width: 100%;-->
 <!--        }-->
 <!--        #about {-->
 <!--            flex: 6;-->
-<!--            margin-right: 20px;-->
+<!--            margin-right: 40px;-->
 <!--        }-->
 <!--        #contact {-->
 <!--            flex: 2;-->
@@ -73,23 +78,39 @@
 <!--            text-align: left;-->
 <!--        }-->
 <!--        .project-container {-->
+<!--            /*position: relative;*/-->
 <!--            display: flex;-->
-<!--            justify-content: space-between;-->
-<!--            align-items: flex-start;-->
 <!--            margin-bottom: 40px;-->
 <!--        }-->
+
 <!--        .project-details {-->
-<!--            flex: 3;-->
+<!--            width: 60%;-->
+<!--            flex: 1;-->
+<!--            padding-right: 20px;-->
 <!--        }-->
+
 <!--        .project-thumbnail {-->
-<!--            flex: 2;-->
-<!--            margin-left: 20px;-->
+<!--            /*position: absolute;*/-->
+<!--            /*right: -300px; !* 더 오른쪽으로 이동 *!*/-->
+<!--            /*top: 50px; !* 추가: 썸네일을 더 아래로 이동 *!*/-->
+<!--            flex: 0 0 400px; /* 고정된 너비 */-->
+<!--            margin-left: 100px;-->
 <!--        }-->
+
 <!--        .project-thumbnail img {-->
 <!--            width: 100%;-->
 <!--            height: auto;-->
-<!--            max-width: 400px;-->
+<!--            /*max-width: 400px;*/-->
 <!--            object-fit: cover;-->
+<!--        }-->
+
+<!--        .section-divider {-->
+<!--            width: 100%;-->
+<!--            max-width: 1200px; /* 최대 너비 설정 */-->
+<!--            margin: 0 auto; /* 중앙 정렬 */-->
+<!--            border-bottom: 1px solid #ccc;-->
+<!--            padding-bottom: 10px;-->
+<!--            margin-bottom: 20px;-->
 <!--        }-->
 <!--    </style>-->
 <!--</head>-->
@@ -97,13 +118,13 @@
 <!--<main>-->
 <!--    <div id="about-contact-wrapper">-->
 <!--        <section id="about">-->
-<!--            <h2>ABOUT ME <span class="emoji">👨‍💻</span></h2>-->
+<!--            <h2 class="section-divider">ABOUT ME <span class="emoji">👨‍💻</span></h2>-->
 <!--            <p>안녕하세요. 백엔드 개발자 정현수입니다.</p>-->
 <!--            <p>졸업 후 Django 백엔드 개발자로서의 첫 발자국을 내딛었습니다. 대학교 1학년 때부터 다른 과목보다는 직접 만든 결과물에 뿌듯함을 느낄 수 있는 프로그래밍 과목에 가장 흥미가 많이 갔습니다. 파이썬 기초부터 시작해 데이터 분석 및 머신러닝, 딥러닝, 인공지능 학습을 재밌게 배웠습니다. 그러던 도중 6년 동안 꾸준히 해온 헬스에 심취해 휴학을 하고 헬스트레이너를 하다 헬스업계에서도 나의 전공 분야가 도움이 많이 될 수 있다는 걸 느껴 다시 학업으로 돌아오게 되었습니다. 졸업 후 국비학원 과정에서 데이터 분석, Django 프레임워크를 배웠는데 백엔드 과정에 흥미와 재미를 많이 느꼈고 요즘에도 매일매일 개발 공부에 많은 시간을 투자하고 있습니다. 아직 미약한 부분들이 많지만, 그만큼 더 성장할 수 있다고 확신합니다.</p>-->
 <!--        </section>-->
 
 <!--        <section id="contact">-->
-<!--            <h2>CONTACT <span class="emoji">✉️</span></h2>-->
+<!--            <h2 class="section-divider">CONTACT <span class="emoji">✉️</span></h2>-->
 <!--            <div class="contact-info">-->
 <!--                <p>📧 Email: hyeonsuj48@gmail.com</p>-->
 <!--                <p>🐙 GitHub: <a href="https://github.com/chrishyunstead" target="_blank">https://github.com/chrishyunstead</a></p>-->
@@ -112,13 +133,13 @@
 <!--    </div>-->
 
 <!--    <section id="education">-->
-<!--        <h2>EDUCATION <span class="emoji">🎓</span></h2>-->
+<!--        <h2 class="section-divider">EDUCATION <span class="emoji">🎓</span></h2>-->
 <!--        <p>2017.01 ~ 2024.02</p>-->
 <!--        <p>숭실대학교 산업정보시스템공학과</p>-->
 <!--    </section>-->
 
 <!--    <section id="skills">-->
-<!--        <h2>SKILLS <span class="emoji">🛠️</span></h2>-->
+<!--        <h2 class="section-divider">SKILLS <span class="emoji">🛠️</span></h2>-->
 <!--        <div class="skills-list">-->
 <!--            <h3>Backend 💻</h3>-->
 <!--            <ul>-->
@@ -159,19 +180,18 @@
 <!--    </section>-->
 
 <!--    <section id="career">-->
-<!--        <h2>CAREER <span class="emoji">💼</span></h2>-->
+<!--        <h2 class="section-divider">CAREER <span class="emoji">💼</span></h2>-->
 <!--        <h3>플레이데이터 엔코아 아카데미 데이터애널리시스 과정 (2024.02 ~ 2024.07)</h3>-->
 <!--        <p>데이터 분석, Django 프레임워크</p>-->
 <!--        <p>플레이데이터 엔코아에서 데이터애널리시스 과정을 수료하였습니다. 수강을 하며 Python 언어를 기반으로 데이터 분석, 인공지능 학습, Django 프레임워크의 DRF/HTML/CSS/Javascript, MySQL/AWS RDS 통해 웹서비스를 개발했으며, FastApi/AWS EC2로 모델 서빙 및 웹 배포를 했습니다. 그리고 팀 프로젝트를 진행하며 Git, Github, Slack, Notion을 통해 협업하는 방법을 배우며 개발에서의 소통의 중요성을 배웠습니다.</p>-->
 <!--    </section>-->
 
 <!--    <section id="projects">-->
-<!--        <h2>PROJECT <span class="emoji">📁</span></h2>-->
+<!--        <h2 class="section-divider">PROJECT <span class="emoji">📁</span></h2>-->
 
 <!--        <div class="project-container">-->
 <!--            <div class="project-details">-->
 <!--                <h3>1차 프로젝트: 부산항 입항 외국인 선원 대상 마케팅 인사이트 제공<span class="emoji">🛳️</span></h3>-->
-<!--&lt;!&ndash;                <p><a href="https://github.com/chrishyunstead/first_project.git" style="color: black; text-decoration: none;">📄 1차 프로젝트 링크</a></p>&ndash;&gt;-->
 <!--                <p><strong>서비스 기능</strong></p>-->
 <!--                <ul>-->
 <!--                    <li>부산항만공사에게 선용품 구매플랫폼 구축을 위한 데이터 제공</li>-->
@@ -200,7 +220,6 @@
 <!--        <div class="project-container">-->
 <!--            <div class="project-details">-->
 <!--                <h3>2차 프로젝트: OOF(Oracle of Football) 플랫폼 구축<span class="emoji">⚽</span></h3>-->
-<!--&lt;!&ndash;                <p><a href="https://github.com/chrishyunstead/second_project.git" style="color: black; text-decoration: none;">📄 2차 프로젝트 링크</a></p>&ndash;&gt;-->
 <!--                <p><strong>서비스 기능</strong></p>-->
 <!--                <ul>-->
 <!--                    <li>유럽 5대 축구 리그의 선수 및 경기 데이터를 기반으로 한 기능 서비스 제공</li>-->
@@ -222,7 +241,7 @@
 <!--            </div>-->
 <!--            <div class="project-thumbnail">-->
 <!--                <a href="https://github.com/chrishyunstead/second_project" target="_blank">-->
-<!--                    <img src="https://github.com/chrishyunstead/second_project/blob/main/OOF_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4.jpg?raw=true" alt="Project Thumbnail">-->
+<!--                    <img src="OOF_배경화면.jpg" alt="Project Thumbnail">-->
 <!--                </a>-->
 <!--            </div>-->
 <!--        </div>-->
@@ -230,7 +249,6 @@
 <!--        <div class="project-container">-->
 <!--            <div class="project-details">-->
 <!--                <h3>3차 프로젝트: Football Agora Project<span class="emoji">🏃‍♂️</span></h3>-->
-<!--&lt;!&ndash;                <p><a href="https://github.com/chrishyunstead/Final_project.git" style="color: black; text-decoration: none;">📄 3차 프로젝트 링크</a></p>&ndash;&gt;-->
 <!--                <p><strong>서비스 기능</strong></p>-->
 <!--                <ul>-->
 <!--                    <li>누구나 풋살 문화에 쉽게 접근할 수 있도록 풋살 특화 생성형 AI 서비스 제공 및 풋살 매칭 플랫폼 구축</li>-->
@@ -280,11 +298,9 @@
         }
         main {
             width: 100%;
-            margin: 0;
+            margin: 0 auto;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* 왼쪽 정렬 */
+            max-width: 1200px; /* 최대 너비 설정 */
         }
         section {
             margin-bottom: 40px;
@@ -297,6 +313,7 @@
             margin-bottom: 20px;
             display: flex;
             align-items: center;
+            width: 100%;
         }
         h3 {
             font-weight: bold;
@@ -333,7 +350,7 @@
         }
         #about {
             flex: 6;
-            margin-right: 20px;
+            margin-right: 40px;
         }
         #contact {
             flex: 2;
@@ -342,19 +359,19 @@
             text-align: left;
         }
         .project-container {
-            position: relative;
+            display: flex;
             margin-bottom: 40px;
         }
 
         .project-details {
-            width: 60%;
+            flex: 1;
             padding-right: 20px;
         }
 
         .project-thumbnail {
-            position: absolute;
-            right: -220px; /* 더 오른쪽으로 이동 */
-            top: 40px; /* 추가: 썸네일을 더 아래로 이동 */
+            flex: 0 0 400px; /* 고정된 너비 */
+            margin-left: 20px;
+            margin-top: 40px; /* 썸네일을 더 아래로 이동 */
         }
 
         .project-thumbnail img {
@@ -363,19 +380,26 @@
             max-width: 400px;
             object-fit: cover;
         }
+
+        .section-divider {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
 <main>
     <div id="about-contact-wrapper">
         <section id="about">
-            <h2>ABOUT ME <span class="emoji">👨‍💻</span></h2>
+            <h2 class="section-divider">ABOUT ME <span class="emoji">👨‍💻</span></h2>
             <p>안녕하세요. 백엔드 개발자 정현수입니다.</p>
-            <p>졸업 후 Django 백엔드 개발자로서의 첫 발자국을 내딛었습니다. 대학교 1학년 때부터 다른 과목보다는 직접 만든 결과물에 뿌듯함을 느낄 수 있는 프로그래밍 과목에 가장 흥미가 많이 갔습니다. 파이썬 기초부터 시작해 데이터 분석 및 머신러닝, 딥러닝, 인공지능 학습을 재밌게 배웠습니다. 그러던 도중 6년 동안 꾸준히 해온 헬스에 심취해 휴학을 하고 헬스트레이너를 하다 헬스업계에서도 나의 전공 분야가 도움이 많이 될 수 있다는 걸 느껴 다시 학업으로 돌아오게 되었습니다. 졸업 후 국비학원 과정에서 데이터 분석, Django 프레임워크를 배웠는데 백엔드 과정에 흥미와 재미를 많이 느꼈고 요즘에도 매일매일 개발 공부에 많은 시간을 투자하고 있습니다. 아직 미약한 부분들이 많지만, 그만큼 더 성장할 수 있다고 확신합니다.</p>
+            <p>졸업 후 Django 백엔드 개발자로서의 첫 발자국을 내딛었습니다. 대학교 1학년 때부터 다른 과목보다는 직접 만든 결과물에 뿌듯함을 느낄 수 있는 프로그래밍 과목에 가장 흥미가 많이 가서 파이썬 기초부터 시작해 데이터 분석 및 머신러닝, 딥러닝, 인공지능 학습을 재밌게 배웠습니다.<br>그러던 도중 6년 동안 꾸준히 해온 헬스에 심취해 휴학을 하고 헬스트레이너를 하다 헬스업계에서도 나의 전공 분야가 도움이 많이 될 수 있다는 걸 느껴 다시 학업으로 돌아오게 되었습니다.<br>졸업 후 국비학원 과정에서 데이터 분석, Django 프레임워크를 배웠는데 백엔드 과정에 흥미와 재미를 많이 느꼈고 요즘에도 매일매일 개발 공부에 많은 시간을 투자하고 있습니다.<br> 아직 미약한 부분들이 많지만, 그만큼 더 성장할 수 있다고 확신합니다.</p>
         </section>
 
         <section id="contact">
-            <h2>CONTACT <span class="emoji">✉️</span></h2>
+            <h2 class="section-divider">CONTACT <span class="emoji">✉️</span></h2>
             <div class="contact-info">
                 <p>📧 Email: hyeonsuj48@gmail.com</p>
                 <p>🐙 GitHub: <a href="https://github.com/chrishyunstead" target="_blank">https://github.com/chrishyunstead</a></p>
@@ -384,13 +408,13 @@
     </div>
 
     <section id="education">
-        <h2>EDUCATION <span class="emoji">🎓</span></h2>
+        <h2 class="section-divider">EDUCATION <span class="emoji">🎓</span></h2>
         <p>2017.01 ~ 2024.02</p>
         <p>숭실대학교 산업정보시스템공학과</p>
     </section>
 
     <section id="skills">
-        <h2>SKILLS <span class="emoji">🛠️</span></h2>
+        <h2 class="section-divider">SKILLS <span class="emoji">🛠️</span></h2>
         <div class="skills-list">
             <h3>Backend 💻</h3>
             <ul>
@@ -431,14 +455,14 @@
     </section>
 
     <section id="career">
-        <h2>CAREER <span class="emoji">💼</span></h2>
+        <h2 class="section-divider">CAREER <span class="emoji">💼</span></h2>
         <h3>플레이데이터 엔코아 아카데미 데이터애널리시스 과정 (2024.02 ~ 2024.07)</h3>
         <p>데이터 분석, Django 프레임워크</p>
         <p>플레이데이터 엔코아에서 데이터애널리시스 과정을 수료하였습니다. 수강을 하며 Python 언어를 기반으로 데이터 분석, 인공지능 학습, Django 프레임워크의 DRF/HTML/CSS/Javascript, MySQL/AWS RDS 통해 웹서비스를 개발했으며, FastApi/AWS EC2로 모델 서빙 및 웹 배포를 했습니다. 그리고 팀 프로젝트를 진행하며 Git, Github, Slack, Notion을 통해 협업하는 방법을 배우며 개발에서의 소통의 중요성을 배웠습니다.</p>
     </section>
 
     <section id="projects">
-        <h2>PROJECT <span class="emoji">📁</span></h2>
+        <h2 class="section-divider">PROJECT <span class="emoji">📁</span></h2>
 
         <div class="project-container">
             <div class="project-details">
@@ -533,3 +557,4 @@
 </footer>
 </body>
 </html>
+
