@@ -1,3 +1,287 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>정현수의 포트폴리오</title>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="styles.css">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="icon" href="favicon.ico" type="image/x-icon">&ndash;&gt;-->
+<!--&lt;!&ndash;    <style>&ndash;&gt;-->
+<!--&lt;!&ndash;        body {&ndash;&gt;-->
+<!--&lt;!&ndash;            font-family: Arial, sans-serif;&ndash;&gt;-->
+<!--&lt;!&ndash;            background-color: #fff;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;            padding: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        main {&ndash;&gt;-->
+<!--&lt;!&ndash;            width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin: 0 auto;&ndash;&gt;-->
+<!--&lt;!&ndash;            padding: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;            max-width: 1200px; /* 최대 너비 설정 */&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        section {&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-bottom: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        h2 {&ndash;&gt;-->
+<!--&lt;!&ndash;            font-size: 24px;&ndash;&gt;-->
+<!--&lt;!&ndash;            color: #333;&ndash;&gt;-->
+<!--&lt;!&ndash;            border-bottom: 1px solid #ccc;&ndash;&gt;-->
+<!--&lt;!&ndash;            padding-bottom: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-bottom: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;            display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;            align-items: center;&ndash;&gt;-->
+<!--&lt;!&ndash;            width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        h3 {&ndash;&gt;-->
+<!--&lt;!&ndash;            font-weight: bold;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-top: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .emoji {&ndash;&gt;-->
+<!--&lt;!&ndash;            font-size: 1.2em;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-left: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        a {&ndash;&gt;-->
+<!--&lt;!&ndash;            color: #000;&ndash;&gt;-->
+<!--&lt;!&ndash;            text-decoration: none;&ndash;&gt;-->
+<!--&lt;!&ndash;            border-bottom: 1px solid #000;&ndash;&gt;-->
+<!--&lt;!&ndash;            transition: color 0.3s, border-bottom 0.3s;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        a:hover {&ndash;&gt;-->
+<!--&lt;!&ndash;            color: #555;&ndash;&gt;-->
+<!--&lt;!&ndash;            border-bottom: 1px solid #555;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .contact-info p {&ndash;&gt;-->
+<!--&lt;!&ndash;            margin: 0 0 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .project-list ul, .skills-list ul {&ndash;&gt;-->
+<!--&lt;!&ndash;            list-style: none;&ndash;&gt;-->
+<!--&lt;!&ndash;            padding: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .project-list ul li, .skills-list ul li {&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-bottom: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        #about-contact-wrapper {&ndash;&gt;-->
+<!--&lt;!&ndash;            display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;            justify-content: space-between;&ndash;&gt;-->
+<!--&lt;!&ndash;            width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        #about {&ndash;&gt;-->
+<!--&lt;!&ndash;            flex: 6;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-right: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        #contact {&ndash;&gt;-->
+<!--&lt;!&ndash;            flex: 2;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .contact-info {&ndash;&gt;-->
+<!--&lt;!&ndash;            text-align: left;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .project-container {&ndash;&gt;-->
+<!--&lt;!&ndash;            display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-bottom: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;        .project-details {&ndash;&gt;-->
+<!--&lt;!&ndash;            flex: 1;&ndash;&gt;-->
+<!--&lt;!&ndash;            padding-right: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;        .project-thumbnail {&ndash;&gt;-->
+<!--&lt;!&ndash;            flex: 0 0 400px; /* 고정된 너비 */&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-left: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-top: 40px; /* 썸네일을 더 아래로 이동 */&ndash;&gt;-->
+<!--&lt;!&ndash;            text-align: center; /* 텍스트 가운데 정렬 */&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;        .project-thumbnail img {&ndash;&gt;-->
+<!--&lt;!&ndash;            width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;            height: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;            max-width: 400px;&ndash;&gt;-->
+<!--&lt;!&ndash;            object-fit: cover;&ndash;&gt;-->
+<!--&lt;!&ndash;            transition: transform 0.3s, opacity 0.3s; /* 트랜지션 효과 추가 */&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;        .project-thumbnail img:hover {&ndash;&gt;-->
+<!--&lt;!&ndash;            transform: scale(1.05); /* 이미지 확대 효과 */&ndash;&gt;-->
+<!--&lt;!&ndash;            opacity: 0.8; /* 이미지 반투명 효과 */&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;        .section-divider {&ndash;&gt;-->
+<!--&lt;!&ndash;            width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;            border-bottom: 1px solid #ccc;&ndash;&gt;-->
+<!--&lt;!&ndash;            padding-bottom: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-bottom: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </style>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<main>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div id="about-contact-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;        <section id="about">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h2 class="section-divider">ABOUT ME <span class="emoji">👨‍💻</span></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>안녕하세요. 백엔드 개발자 정현수입니다.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>졸업 후 Django 백엔드 개발자로서의 첫 발자국을 내딛었습니다. 대학교 1학년 때부터 다른 과목보다는 직접 만든 결과물에 뿌듯함을 느낄 수 있는 프로그래밍 과목에 가장 흥미가 많이 가서 파이썬 기초부터 시작해 데이터 분석 및 머신러닝, 딥러닝, 인공지능 학습을 재밌게 배웠습니다.<br>그러던 도중 6년 동안 꾸준히 해온 헬스에 심취해 휴학을 하고 헬스트레이너를 하다 헬스업계에서도 나의 전공 분야가 도움이 많이 될 수 있다는 걸 느껴 다시 학업으로 돌아오게 되었습니다.<br>졸업 후 국비학원 과정에서 데이터 분석, Django 프레임워크를 배웠는데 백엔드 과정에 흥미와 재미를 많이 느꼈고 요즘에도 매일매일 개발 공부에 많은 시간을 투자하고 있습니다.<br> 아직 미약한 부분들이 많지만, 그만큼 더 성장할 수 있다고 확신합니다.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </section>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <section id="contact">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h2 class="section-divider">CONTACT <span class="emoji">✉️</span></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="contact-info">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>📧 Email: hyeonsuj48@gmail.com</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>🐙 GitHub: <a href="https://github.com/chrishyunstead" target="_blank">https://github.com/chrishyunstead</a></p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </section>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <section id="education">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2 class="section-divider">EDUCATION <span class="emoji">🎓</span></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>2017.01 ~ 2024.02</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>숭실대학교 산업정보시스템공학과</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </section>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <section id="skills">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2 class="section-divider">SKILLS <span class="emoji">🛠️</span></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="skills-list">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h3>Backend 💻</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Django Rest Framework</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Fast Api</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>MySQL, AWS RDS</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>AWS EC2</li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <h3>Frontend 🌐</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>HTML5, CSS3, Javascript</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>TailwindCSS</li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <h3>Data Analysis 📊</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Pandas</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Data Visualization</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Data Preprocessing</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Web Crawling</li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <h3>Artificial Intelligence (AI) 🤖</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Machine Learning</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Deep Learning</li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <h3>Tools 🧰</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Git, GitHub</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Slack, Notion</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Pycharm, VSCode, JupyterNotebook</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>Postman</li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </section>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <section id="career">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2 class="section-divider">CAREER <span class="emoji">💼</span></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;        <h3>플레이데이터 엔코아 아카데미 데이터애널리시스 과정 (2024.02 ~ 2024.07)</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>데이터 분석, Django 프레임워크</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>플레이데이터 엔코아에서 데이터애널리시스 과정을 수료하였습니다. 수강을 하며 Python 언어를 기반으로 데이터 분석, 인공지능 학습, Django 프레임워크의 DRF/HTML/CSS/Javascript, MySQL/AWS RDS 통해 웹서비스를 개발했으며, FastApi/AWS EC2로 모델 서빙 및 웹 배포를 했습니다. 그리고 팀 프로젝트를 진행하며 Git, Github, Slack, Notion을 통해 협업하는 방법을 배우며 개발에서의 소통의 중요성을 배웠습니다.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </section>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <section id="projects">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2 class="section-divider">PROJECT <span class="emoji">📁</span></h2>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <div class="project-container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="project-details">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h3>1차 프로젝트: 부산항 입항 외국인 선원 대상 마케팅 인사이트 제공<span class="emoji">🛳️</span></h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>서비스 기능</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>부산항만공사에게 선용품 구매플랫폼 구축을 위한 데이터 제공</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>체류 시간별 부산 관광코스 정보 제공 서비스</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>서비스 타겟</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>부산항만공사</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>외국인 선원</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>구현 내용</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>물동량과 체류시간의 연관분석을 통한 선용품 구매플랫폼 서비스의 니즈 파악</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>외국인 선호 선용품을 수집 및 크롤링 후 분석을 통한 워드클라우드 시각화</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>선용품 보관창고 위치 분석 및 시각화</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>부산 지역 내 맛집, 관광지, 숙박 지도 시각화</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="project-thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="https://github.com/chrishyunstead/first_project" target="_blank">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="https://github.com/Kshi0219/Adios/assets/149676714/0505755b-91f5-4f97-a42b-860c0aadd829" alt="Project Thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <div class="project-container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="project-details">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h3>2차 프로젝트: OOF(Oracle of Football) 플랫폼 구축<span class="emoji">⚽</span></h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>서비스 기능</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>유럽 5대 축구 리그의 선수 및 경기 데이터를 기반으로 한 기능 서비스 제공</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>서비스 타겟</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>축구팀 스카우터</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>축구 게임 유저 (FIFA, FM, FC 등)</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>해외 및 국내 축구 팬</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>구현 내용</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>모델 학습을 위한 데이터 전처리</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>머신러닝 기반 선수 속성 예측 (유망주, 능력치, 잠재력)</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>포지션별 유사 선수 분류 조회</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>선수 Market Value 예측</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>딥러닝(Softmax) 기반 승부 예측</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="project-thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="https://github.com/chrishyunstead/second_project" target="_blank">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="OOF_배경화면.jpg" alt="Project Thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <div class="project-container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="project-details">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h3>3차 프로젝트: Football Agora Project<span class="emoji">🏃‍♂️</span></h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>서비스 기능</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>누구나 풋살 문화에 쉽게 접근할 수 있도록 풋살 특화 생성형 AI 서비스 제공 및 풋살 매칭 플랫폼 구축</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>서비스 타겟</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>풋살을 하고 싶은데 함께 할 사람을 찾기 어려운 사람들</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>풋살의 규칙을 잘 모르는 사람들</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>본인의 경기를 분석한 통계적 수치를 보고 싶은 사람들</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p><strong>구현 내용</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>Django Framework로 웹 개발 진행</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>화면 설계서와 요구사항 정의서를 바탕으로 페이지마다 URL 정의 및 권한 지정</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>화면 설계서를 바탕으로 DB 모델링 후 RDS와 연동</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>FastAPI로 챗봇 모델 서빙</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li>Github 관리 및 협업</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="project-thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="https://github.com/chrishyunstead/Final_project" target="_blank">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="https://capsule-render.vercel.app/api?type=venom&height=300&text=Football%20Agora&fontSize=90&color=0:29DF8D,100:00693B&stroke=00693B" alt="Project Thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </section>&ndash;&gt;-->
+<!--&lt;!&ndash;</main>&ndash;&gt;-->
+<!--&lt;!&ndash;<footer>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>&copy; 2024 정현수</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</footer>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,6 +396,72 @@
             margin-bottom: 20px;
         }
 
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skill-item {
+            width: 48%; /* 기존 45%에서 48%로 수정 */
+            margin-bottom: 10px; /* 기존 15px에서 10px로 수정 */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .skill-item .percentage {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .skill-item .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background-color: #f3f3f3;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+
+        .skill-item .progress-bar {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .skill-item p {
+            margin: 8px 0 0 0;
+            font-size: 14px;
+        }
+        .libraries-used {
+            margin-top: 10px;
+        }
+        .library-item {
+            display: inline-block;
+            margin: 5px;
+        }
+         .view-on-github {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .view-on-github img {
+            width: 20px; /* 아이콘 크기 조정 */
+            height: 20px;
+            margin-right: 5px; /* 아이콘과 텍스트 사이의 간격 */
+        }
+        .view-on-github span {
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -141,49 +491,84 @@
     <section id="skills">
         <h2 class="section-divider">SKILLS <span class="emoji">🛠️</span></h2>
         <div class="skills-list">
-            <h3>Backend 💻</h3>
-            <ul>
-                <li>Django Rest Framework</li>
-                <li>Fast Api</li>
-                <li>MySQL, AWS RDS</li>
-                <li>AWS EC2</li>
-            </ul>
-
-            <h3>Frontend 🌐</h3>
-            <ul>
-                <li>HTML5, CSS3, Javascript</li>
-                <li>TailwindCSS</li>
-            </ul>
-
-            <h3>Data Analysis 📊</h3>
-            <ul>
-                <li>Pandas</li>
-                <li>Data Visualization</li>
-                <li>Data Preprocessing</li>
-                <li>Web Crawling</li>
-            </ul>
-
-            <h3>Artificial Intelligence (AI) 🤖</h3>
-            <ul>
-                <li>Machine Learning</li>
-                <li>Deep Learning</li>
-            </ul>
-
-            <h3>Tools 🧰</h3>
-            <ul>
-                <li>Git, GitHub</li>
-                <li>Slack, Notion</li>
-                <li>Pycharm, VSCode, JupyterNotebook</li>
-                <li>Postman</li>
-            </ul>
+            <div class="skill-item">
+                <h3>Python 🐍<span class="percentage">80%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 80%; background-color: #3498db;"></div>
+                </div>
+                <p>학부생때부터 파이썬 언어로 공부하고 있고 프로젝트 또한 모두 파이썬언어로 개발했습니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Django Framework 🌐<span class="percentage">70%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 70%; background-color: #e74c3c;"></div>
+                </div>
+                <p>Django FrameWork로 혼자서 웹 서비스를 개발하였습니다. Django에 내장된 클래스와 강력한 ORM 기능들을 적극 활용하여 CBV, FBV 기반으로 Football Agora(풋살 매칭 플랫폼) 웹 서비스를 구현했습니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Django Rest Framework(DRF) 🛠️<span class="percentage">60%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 60%; background-color: #c0392b;"></div>
+                </div>
+                <p>DRF로 POST, GET, PUT, DELETE 요청을 처리하는 API 엔드포인트를 정의 후 Postman으로 API의 동작을 확인하고 검증까지 해봤습니다. 추후 Flutter와 함께 앱을 개발할 예정입니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>FastApi ⚡<span class="percentage">40%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 40%; background-color: #e67e22;"></div>
+                </div>
+                <p>FastApi는 Football Agora 프로젝트에서 모델을 서빙할때 사용해봤으며, Django보다 상대적으로 가볍고 빠르게 앱개발을 진행할 수 있어 개인 프로젝트때 활용할 예정입니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Frontend 🎨: HTML5, CSS3, Javascript<span class="percentage">50%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 50%; background-color: #f39c12;"></div>
+                </div>
+                <p>Football Agora 프로젝트에서 HTML로 페이지를 설계하고 Django 템플릿 문법을 이용해 데이터를 원하는 위치에 넣었으며, 부트스트랩을 활용해 CSS로 디자인을 세부조정했으며, 비동기적 페이지가 필요할때 Javascript를 활용했습니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Data Analysis 📊: Pandas, Data Visualization, Preprocessing, Web Crawling<span class="percentage">80%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 80%; background-color: #8e44ad;"></div>
+                </div>
+                <p>데이터 분석은 학부때부터 해왔고, pandas에 익숙하며 전처리, 시각화, 크롤링 등을 부산항, OOF 프로젝트때 모두 수행하였습니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>AWS EC2, AWS RDS(MySQL) ☁️<span class="percentage">60%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 60%; background-color: #1abc9c;"></div>
+                </div>
+                <p>Football Agora 프로젝트때 AWS EC2에 웹 서비스를 배포했습니다. RDS와 Django를 연결해 RDS(MySQL)에서 만든 DB를 Django로 불러와 ORM기능으로 데이터를 조작했습니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>협업Tools 🤝: Git, GitHub, Slack, Notion<span class="percentage">60%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 60%; background-color: #34495e;"></div>
+                </div>
+                <p>Git과 GitHub를 활용해서 팀 프로젝트를 관리하고 협업했으며, Slack, Notion으로 소통하고 공유했습니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Artificial Intelligence (AI) 🤖: ML, DL<span class="percentage">70%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 70%; background-color: #2980b9;"></div>
+                </div>
+                <p>머신러닝(ML)과 딥러닝(DL)을 활용해 OOF 프로젝트에서 에측모델을 만들었으며, Scikit-learn, Keras에 익숙합니다.</p>
+            </div>
+            <div class="skill-item">
+                <h3>개발Tools 🧰: Pycharm, VSCode, JupyterNotebook<span class="percentage">70%</span></h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 70%; background-color: #2ecc71;"></div>
+                </div>
+                <p>JupyterNotebook으로 데이터분석을 해왔으며, VSCode와 Pycharm으로 프로젝트때 웹개발 및 데이터 분석을 진행했습니다. 현재는 주로 Pycharm으로 웹개발 중입니다.</p>
+            </div>
         </div>
     </section>
 
     <section id="career">
         <h2 class="section-divider">CAREER <span class="emoji">💼</span></h2>
-        <h3>플레이데이터 엔코아 아카데미 데이터애널리시스 과정 (2024.02 ~ 2024.07)</h3>
+        <h3>플레이데이터 엔코아 아카데미 데이터애널리시스 과정 (2024.01 ~ 2024.07)</h3>
         <p>데이터 분석, Django 프레임워크</p>
-        <p>플레이데이터 엔코아에서 데이터애널리시스 과정을 수료하였습니다. 수강을 하며 Python 언어를 기반으로 데이터 분석, 인공지능 학습, Django 프레임워크의 DRF/HTML/CSS/Javascript, MySQL/AWS RDS 통해 웹서비스를 개발했으며, FastApi/AWS EC2로 모델 서빙 및 웹 배포를 했습니다. 그리고 팀 프로젝트를 진행하며 Git, Github, Slack, Notion을 통해 협업하는 방법을 배우며 개발에서의 소통의 중요성을 배웠습니다.</p>
+        <p>플레이데이터 엔코아에서 데이터애널리시스 과정을 수료하였습니다. 수강을 하며 Python 언어를 기반으로 데이터 분석, 인공지능 학습, Django 프레임워크와 HTML/CSS/Javascript, MySQL/AWS RDS 통해 웹서비스를 개발했으며, FastApi/AWS EC2로 모델 서빙 및 웹 배포를 했습니다. 그리고 팀 프로젝트를 진행하며 Git, Github, Slack, Notion을 통해 협업하는 방법을 배우며 개발에서의 소통의 중요성을 배웠습니다.</p>
     </section>
 
     <section id="projects">
@@ -214,6 +599,24 @@
                 <a href="https://github.com/chrishyunstead/first_project" target="_blank">
                     <img src="https://github.com/Kshi0219/Adios/assets/149676714/0505755b-91f5-4f97-a42b-860c0aadd829" alt="Project Thumbnail">
                 </a>
+                <div class="view-on-github">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub Icon">
+                    <span>View on GitHub</span>
+                </div>
+                <div class="libraries-used">
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Scipy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white"/>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -243,6 +646,30 @@
                 <a href="https://github.com/chrishyunstead/second_project" target="_blank">
                     <img src="OOF_배경화면.jpg" alt="Project Thumbnail">
                 </a>
+                <div class="view-on-github">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub Icon">
+                    <span>View on GitHub</span>
+                </div>
+                <div class="libraries-used">
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white"/>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -272,6 +699,36 @@
                 <a href="https://github.com/chrishyunstead/Final_project" target="_blank">
                     <img src="https://capsule-render.vercel.app/api?type=venom&height=300&text=Football%20Agora&fontSize=90&color=0:29DF8D,100:00693B&stroke=00693B" alt="Project Thumbnail">
                 </a>
+                <div class="view-on-github">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub Icon">
+                    <span>View on GitHub</span>
+                </div>
+                <div class="libraries-used">
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -282,4 +739,3 @@
 </footer>
 </body>
 </html>
-
