@@ -555,7 +555,7 @@
                 <p><strong>핵심 구현 프로세스</strong></p>
                 <ul>
                     <li><strong>1) 데이터 수집</strong> — Holistics BI에서 모델 학습·가용시간·물량·스케줄 데이터 자동 로딩.</li>
-                    <li><strong>2) 모델 학습(RandomForest)</strong> — f(지역, 요일, 물량) → 총 배송 소요시간 예측.</li>
+                    <li><strong>2) 모델 학습(LightGBM)</strong> — f(지역, 요일, 물량) → 총 배송 소요시간 예측.</li>
                     <li><strong>3) 가용시간 결합</strong> — 지역·요일 기준 median 작업시간 산출(IQR 이상치 제거 포함).</li>
                     <li><strong>4) MAX 계산</strong> — 예측된 건당 소요시간 기반으로 기사 타입별 처리 가능량 계산.</li>
                     <li><strong>5) Google Sheets 업데이트</strong> — 운영팀이 사용하는 Sheet에 자동 반영.</li>
