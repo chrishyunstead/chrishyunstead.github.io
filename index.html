@@ -542,12 +542,12 @@
         <!-- 물량기반 예측 -->
         <div class="project-container">
             <div class="project-details">
-                <h3>물량·지역·시간 기반 MAX 예측 모델: Delivery Time MAX Predictor Pipeline <span class="emoji">📊</span></h3>
+                <h3>물량·지역·시간 기반 MAX 예측 모델: Delivery Item MAX Predictor Pipeline <span class="emoji">📊</span></h3>
 
                 <p><strong>서비스 기능</strong></p>
                 <ul>
-                    <li>Holistics BI 데이터 기반으로 <strong>지역·요일·물량에 따른 총 작업시간을 예측</strong>하는 머신러닝 모델.</li>
-                    <li>기사별 결가용시간(Time Availability)과 예측값을 합하여 <strong>운영 가능한 MAX 배송량 자동 산출</strong>.</li>
+                    <li>Holistics BI 데이터 기반으로 <strong>지역·요일·물량에 따른 한 기사에게 배정되는 최대 물량 예측</strong>하는 머신러닝 모델.</li>
+                    <li>기사별 가용시간(Time Availability)과 예측값을 합하여 <strong>운영 가능한 MAX 배송량 자동 산출</strong>.</li>
                     <li>스케줄(기사 타입 별 근무 여부) 기반으로<strong>Y / R / O / WHITE 기사별 MAX 값 자동 분배</strong>.</li>
                     <li>출력 결과는 <strong>Google Sheets에 자동 업데이트</strong>되어 운영팀이 매일 즉시 활용.</li>
                 </ul>
@@ -564,7 +564,7 @@
                 <p><strong>서비스 효과</strong></p>
                 <ul>
                     <li><strong>운영 의사결정 자동화</strong>  
-                        수작업으로 계산하던 지역별 MAX 산정 과정을 일일 자동화.
+                        지역별 물량·패턴을 고려하지 못한 휴리스틱 기반 판단에서 벗어나, 데이터 기반의 일관된 의사결정이 가능해짐.
                     </li>
                     <li><strong>SLA 안정성 향상</strong>  
                         불규칙한 물량 증감에도 기사 타입별 적정 작업량을 즉시 산출.
