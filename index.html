@@ -439,85 +439,42 @@
 
         <div class="project-container">
             <div class="project-details">
-                <h3>우편번호 기반 클러스터링 엔진: Postalcode Clustering Lambda<span class="emoji">📦</span></h3>
+            <h3>우편번호 기반 클러스터링 엔진: Postalcode Clustering Lambda<span class="emoji">📦</span></h3>
 
-                <p><strong>서비스 기능</strong></p>
-                <ul>
-                    <li>
-                        당일배송 환경에서 <strong>SLA(Service Level Agreement)</strong>를 준수하기 위해
-                        허브 출차 전까지의 <strong>분류·라우팅 시간을 단축</strong>하는 클러스터링 엔진입니다.
-                    </li>
-                    <li>
-                        우편번호 그룹, 기사 스케줄, 기사별 최대 작업량(MAX)을 반영하여
-                        <strong>기사 단위 작업 구역(클러스터)을 자동 생성</strong>하고,
-                        허브에서의 편집 시간을 줄여 <strong>간선 출차 시각을 앞당기는 것</strong>을 목표로 합니다.
-                    </li>
-                    <li>
-                        분류 시간 이후에 유입되는 주문은 <strong>오버랩(Overlap) 클러스터링</strong>으로
-                        기존 플랜에 자동 편성하여, 운영 측면에서 누락 없이 안정적으로 처리되도록 설계했습니다.
-                    </li>
-                </ul>
+            <p><strong>서비스 기능</strong></p>
+            <ul>
+                <li>당일배송 환경에서 SLA 준수를 위해 <strong>허브 후편집·라우팅 시간을 단축</strong>하는 클러스터링 엔진.</li>
+                <li>우편번호 그룹·기사 스케줄·작업량(MAX)을 반영해 <strong>운영 가능한 기사별 클러스터 자동 생성</strong>.</li>
+                <li>분류 이후 유입되는 주문은 <strong>오버랩 클러스터링</strong>으로 자동 편성하여 누락 없는 운영을 보장.</li>
+            </ul>
 
-                <p><strong>구현 내용</strong></p>
-                <ul>
-                    <li>
-                        <strong>프로세스1 — 데이터 로딩</strong><br>
-                        배송 아이템, 기사 스케줄, 우편번호 그룹을 MySQL·PostgreSQL에서 적재하여
-                        공간 매칭 및 클러스터링에 필요한 구조로 전처리합니다.
-                    </li>
+            <p><strong>핵심 구현 프로세스</strong></p>
+            <ul>
+                <li><strong>1) 데이터 로딩</strong> — 배송 아이템·기사 스케줄·우편번호 그룹을 적재 및 전처리.</li>
+                <li><strong>2) 1차 클러스터링</strong> — 우편번호 폴리곤 매칭 + K-means++ 기반 초기 그룹 생성 및 운영 제약 적용.</li>
+                <li><strong>3) 소형 그룹 병합</strong> — WHITE 기사 중심의 병합 및 인접 그룹 통합으로 작업량 균형 확보.</li>
+                <li><strong>4) 오버랩 처리</strong> — 배치 이후 들어오는 주문을 가장 가까운 클러스터에 실시간 배정.</li>
+            </ul>
 
-                    <li>
-                        <strong>프로세스2 — 1차 클러스터링 생성</strong><br>
-                        배송 좌표와 우편번호 폴리곤을 매칭하고,
-                        K-means++ 기반으로 초기 클러스터를 생성한 뒤
-                        기사별 MAX 용량 및 근무 지역 제약을 적용하여 운영 가능 단위로 조정합니다.
-                    </li>
+            <p><strong>서비스 효과</strong></p>
+            <ul>
+                <li><strong>클러스터링 시간 38% 단축</strong>  
+                    (43.5분 → 27분) → 허브 출차 시각을 앞당겨 전체 SLA 안정성 향상.
+                </li>
+                <li><strong>평균 배송지 간 거리 15% 감소</strong>  
+                    (130.19m → 110.15m) → 더 조밀한 클러스터 형성, 기사 이동 효율 증가.
+                </li>
+                <li><strong>실물 운영 데이터(약 1.2만 건) 기반 검증</strong>  
+                    당일배송 운영에서도 안정적으로 적용 가능한 알고리즘으로 확인.
+                </li>
+            </ul>
 
-                    <li>
-                        <strong>프로세스3 — 소형 클러스터 병합</strong><br>
-                        일정 기준 이하의 클러스터는 WHITE 기사 중심으로 병합하거나
-                        인접 클러스터와 통합하여 현실적인 배송 작업량을 확보합니다.
-                    </li>
-
-                    <li>
-                        <strong>프로세스4 — 오버랩 클러스터링 적용</strong><br>
-                        배치 실행 이후 유입되는 주문을 기존 클러스터 중
-                        가장 가까운 그룹에 자동 배정하여 당일배송 운영에 맞게 실시간으로 흡수합니다.
-                    </li>
-                </ul>
-                <p><strong>서비스 효과</strong></p>
-                <ul>
-                    <li>
-                        <strong>클러스터링 소요 시간 단축</strong><br>
-                        우편번호 그룹화를 적용한 후, 클러스터 생성~병합 시간이
-                        기존 평균 약 43.5분에서 27분으로 단축되어
-                        <strong>약 38% 감소</strong>했습니다.
-                        허브 후편집 시간이 줄어들면서 간선 출차를 더 이른 시점에 설정할 수 있게 되었습니다.
-                    </li>
-
-                    <li>
-                        <strong>평균 배송지 간 거리 감소(밀집도 향상)</strong><br>
-                        평균 배송지 간 거리가 기존 약 130.19m에서 110.15m로 감소하여
-                        <strong>약 15% 더 조밀한 클러스터</strong>를 형성했습니다.
-                        동일 시간 대비 더 많은 배송지를 커버할 수 있는 구조로 개선되었습니다.
-                    </li>
-
-                    <li>
-                        <strong>실제 운영 물량 기준 검증</strong><br>
-                        주말 일 물량 약 <strong>1.2만 건 규모</strong>의 실운영 데이터를 기반으로 비교·검증한 결과로,
-                        당일배송 환경에서도 안정적으로 적용 가능한 클러스터링 파이프라인임을 확인했습니다.
-                    </li>
-                </ul>
-                <p><strong>자세한 기술 문서</strong></p>
-                <ul>
-                    <li>
-                        전체 알고리즘 구조, 데이터 파이프라인, 운영 제약 설계,
-                        우편번호 그룹 정책, Overlap 처리 방식 등
-                        상세 기술 문서는 아래 링크에서 확인할 수 있습니다.<br>
-                        👉 <a href="https://www.notion.so/Postalcode_Clustering-e9310ba7cd9744a8909259a895bcdd43?source=copy_link" target="_blank">클러스터링 알고리즘 상세 문서 (Notion)</a>
-                    </li>
-                </ul>
-            </div>
+            <p><strong>자세한 기술 문서</strong></p>
+            <a href="https://www.notion.so/Postalcode_Clustering-e9310ba7cd9744a8909259a895bcdd43?source=copy_link" 
+               target="_blank">
+               👉 클러스터링 알고리즘 상세 문서 (Notion)
+            </a>
+        </div>
 
             <div class="project-thumbnail">
                 <!-- 클러스터링 프로젝트 GitHub 레포 링크 (필요 시 수정) -->
