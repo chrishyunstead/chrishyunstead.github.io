@@ -436,20 +436,92 @@
     <!-- ========================== -->
     <section id="delivus-projects">
         <h2 class="section-divider">DELIVUS PROJECTS <span class="emoji">🚚</span></h2>
-        <p>
-            <strong>배송 추적 데이터 분석, 클러스터링 및 예측 모델 개발, GIS 프로젝트 운영 안정화, 경로 최적화 모델 고도화</strong> 등 물류 효율성을 향상시키기 위한 다양한 기술 개발을 진행하고 있습니다.  
-            당일배송 회사로서 <strong>SLA(Service Level Agreement)</strong>를 준수하기 위해 허브 출차 효율을 높이는 것이 핵심 과제이며, 이를 위해 <strong>우편번호 기반 그룹화 클러스터링 기술</strong>을 개발하여 라우트 편집 시간을 단축하였습니다.  
-            또한 지역 간 경계 문제를 완화하고 운영 효율을 높이기 위해 <strong>오버랩(Overlap) 클러스터링 알고리즘</strong>을 고도화하였으며, <strong>예측 모델과 클러스터링 프로세스의 통합 자동화</strong>를 통해 실시간 의사결정을 지원하고 있습니다.
-        </p>
-        <div class="libraries-used">
-            <div class="library-item"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/></div>
-            <div class="library-item"><img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/></div>
-            <div class="library-item"><img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"/></div>
-            <div class="library-item"><img src="https://img.shields.io/badge/GIS-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white"/></div>
-            <div class="library-item"><img src="https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white"/></div>
+
+        <div class="project-container">
+            <div class="project-details">
+                <h3>우편번호 기반 클러스터링 엔진: Postalcode Clustering Lambda<span class="emoji">📦</span></h3>
+
+                <p><strong>서비스 기능</strong></p>
+                <ul>
+                    <li>
+                        당일배송 환경에서 <strong>SLA(Service Level Agreement)</strong>를 준수하기 위해
+                        허브 출차 전까지의 <strong>분류·라우팅 시간을 단축</strong>하는 클러스터링 엔진입니다.
+                    </li>
+                    <li>
+                        우편번호 그룹, 기사 스케줄, 기사별 최대 작업량(MAX)을 반영하여
+                        <strong>기사 단위 작업 구역(클러스터)을 자동 생성</strong>하고,
+                        허브에서의 후편집 시간을 줄여 <strong>간선 출차 시각을 앞당기는 것</strong>을 목표로 합니다.
+                    </li>
+                    <li>
+                        분류 시간 이후에 유입되는 주문은 <strong>오버랩(Overlap) 클러스터링</strong>으로
+                        기존 플랜에 자동 편성하여, 운영 측면에서 누락 없이 안정적으로 처리되도록 설계했습니다.
+                    </li>
+                </ul>
+
+                <p><strong>구현 내용</strong></p>
+                <ul>
+                    <li>
+                        <strong>프로세스1 — 데이터 로딩</strong><br>
+                        배송 아이템, 기사 스케줄, 우편번호 그룹을 MySQL·PostgreSQL에서 적재하여
+                        공간 매칭 및 클러스터링에 필요한 구조로 전처리합니다.
+                    </li>
+
+                    <li>
+                        <strong>프로세스2 — 1차 클러스터링 생성</strong><br>
+                        배송 좌표와 우편번호 폴리곤을 매칭하고,
+                        K-means++ 기반으로 초기 클러스터를 생성한 뒤
+                        기사별 MAX 용량 및 근무 지역 제약을 적용하여 운영 가능 단위로 조정합니다.
+                    </li>
+
+                    <li>
+                        <strong>프로세스3 — 소형 클러스터 병합</strong><br>
+                        일정 기준 이하의 클러스터는 WHITE 기사 중심으로 병합하거나
+                        인접 클러스터와 통합하여 현실적인 배송 작업량을 확보합니다.
+                    </li>
+
+                    <li>
+                        <strong>프로세스4 — 오버랩 클러스터링 적용</strong><br>
+                        배치 실행 이후 유입되는 주문을 기존 클러스터 중
+                        가장 가까운 그룹에 자동 배정하여 당일배송 운영에 맞게 실시간으로 흡수합니다.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-thumbnail">
+                <!-- 클러스터링 프로젝트 GitHub 레포 링크 (필요 시 수정) -->
+                <a href="https://github.com/chrishyunstead/Delivus_Clustering.git" target="_blank">
+                    <img src="https://capsule-render.vercel.app/api?type=rect&height=200&text=Delivus%20Postalcode%20Clustering&fontSize=32&color=0:1E3C72,100:2A5298&stroke=1E3C72" alt="Delivus Clustering Project Thumbnail">
+                </a>
+                <div class="view-on-github">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub Icon">
+                    <span>View on GitHub</span>
+                </div>
+                <div class="libraries-used">
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/GeoPandas-0099CC?style=for-the-badge&logo=python&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Shapely-555555?style=for-the-badge&logo=python&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"/>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white"/>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
     <!-- ========================== -->
     <!-- 🤖 Sub Projects 섹션 -->
     <!-- ========================== -->
