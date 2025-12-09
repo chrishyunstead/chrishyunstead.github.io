@@ -444,16 +444,28 @@
             <p><strong>서비스 기능</strong></p>
             <ul>
                 <li>당일배송 환경에서 SLA 준수를 위해 <strong>허브 편집·라우팅 시간을 단축</strong>하는 클러스터링 엔진</li>
-                <li>우편번호 그룹·기사 스케줄·지역별 최대 배송량(MAX)을 반영해 <strong>운영 가능한 기사별 클러스터 자동 생성</strong>.</li>
+                <li>우편번호 그룹·기사 스케줄·지역별 최대 배송량(MAX)을 반영해 <strong>운영 가능한 기사별 클러스터 자동 생성</strong></li>
                 <li>분류 이후 유입되는 주문은 <strong>오버랩 클러스터링</strong>으로 자동 편성하여 누락 없는 유연한 운영 보장</li>
             </ul>
 
             <h4>핵심 구현 프로세스</h4>
             <ul>
-                <li><strong>1) 데이터 로딩</strong> — 배송 아이템 · 기사 스케줄 · 우편번호 그룹 로딩</li>
-                <li><strong>2) 1차 클러스터링</strong> — 우편번호 폴리곤 매칭 + K-means++ 기반 초기 그룹 생성</li>
-                <li><strong>3) 소형 그룹 병합</strong> — 인접 클러스터 통합으로 작업량 균형 확보</li>
-                <li><strong>4) 오버랩 처리</strong> — 클러스터링 이후 유입 주문을 실시간 자동 배정</li>
+                <li>
+                    <strong>1) 데이터 로딩</strong><br>
+                    배송 아이템 · 기사 스케줄 · 우편번호 그룹 로딩
+                </li>
+                <li>
+                    <strong>2) 1차 클러스터링</strong><br>
+                    우편번호 폴리곤 매칭 + K-means++ 기반 초기 그룹 생성
+                </li>
+                <li>
+                    <strong>3) 소형 그룹 병합</strong><br>
+                    인접 클러스터 통합으로 작업량 균형 확보
+                </li>
+                <li>
+                    <strong>4) 오버랩 클러스터링</strong><br>
+                    클러스터링 이후 유입 주문을 실시간 자동 배정
+                </li>
             </ul>
 
             <h4>서비스 효과</h4>
@@ -547,15 +559,15 @@
                 <p><strong>서비스 기능</strong></p>
                 <ul>
                     <li>Holistics BI 툴 API 데이터 기반으로 <strong>물량·지역·요일에 따른 총 배송 소요시간 예측</strong></li>
-                    <li>지역별 가용시간과 예측값을 활용하여 <strong>운영 가능한 최대 배송량 자동 산출</strong>.</li>
-                    <li>기사 스케줄 기반으로 <strong>고정/FLEX 기사별 MAX 값 자동 분배</strong>.</li>
+                    <li>지역별 가용시간과 예측값을 활용하여 <strong>운영 가능한 최대 배송량 자동 산출</strong></li>
+                    <li>기사 스케줄 기반으로 <strong>고정/FLEX 기사별 MAX 값 자동 분배</strong></li>
                     <li>출력 결과는 <strong>Google Sheets에 자동 업데이트</strong>되어 운영팀이 매일 즉시 활용</li>
                 </ul>
 
                 <h4>핵심 구현 프로세스</h4>
                 <ul>
                     <li>
-                        <strong>1) 데이터 수집</strong><br>
+                        <strong>1) 데이터 로딩</strong><br>
                         Holistics BI API로 모델 학습·가용시간·물량·스케줄 데이터 로딩
                     </li>
                     <li>
