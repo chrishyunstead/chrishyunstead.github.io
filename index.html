@@ -443,29 +443,29 @@
 
             <p><strong>서비스 기능</strong></p>
             <ul>
-                <li>당일배송 환경에서 SLA 준수를 위해 <strong>허브 편집·라우팅 시간을 단축</strong>하는 클러스터링 엔진.</li>
+                <li>당일배송 환경에서 SLA 준수를 위해 <strong>허브 편집·라우팅 시간을 단축</strong>하는 클러스터링 엔진</li>
                 <li>우편번호 그룹·기사 스케줄·지역별 최대 배송량(MAX)을 반영해 <strong>운영 가능한 기사별 클러스터 자동 생성</strong>.</li>
-                <li>분류 이후 유입되는 주문은 <strong>오버랩 클러스터링</strong>으로 자동 편성하여 누락 없는 운영을 보장.</li>
+                <li>분류 이후 유입되는 주문은 <strong>오버랩 클러스터링</strong>으로 자동 편성하여 누락 없는 유연한 운영 보장</li>
             </ul>
 
-            <p><strong>핵심 구현 프로세스</strong></p>
+            <h4>핵심 구현 프로세스</h4>
             <ul>
-                <li><strong>1) 데이터 로딩</strong> — 배송 아이템·기사 스케줄·우편번호 그룹을 적재 및 전처리.</li>
-                <li><strong>2) 1차 클러스터링</strong> — 우편번호 폴리곤 매칭 + K-means++ 기반 초기 그룹 생성 및 운영 제약 적용.</li>
-                <li><strong>3) 소형 그룹 병합</strong> — 인접 클러스터 그룹 통합으로 배송량 균형 확보.</li>
-                <li><strong>4) 오버랩 처리</strong> — 배치 이후 들어오는 주문을 가장 가까운 클러스터에 실시간 배정.</li>
+                <li><strong>1) 데이터 로딩</strong> — 배송 아이템 · 기사 스케줄 · 우편번호 그룹 로딩</li>
+                <li><strong>2) 1차 클러스터링</strong> — 우편번호 폴리곤 매칭 + K-means++ 기반 초기 그룹 생성</li>
+                <li><strong>3) 소형 그룹 병합</strong> — 인접 클러스터 통합으로 작업량 균형 확보</li>
+                <li><strong>4) 오버랩 처리</strong> — 클러스터링 이후 유입 주문을 실시간 자동 배정</li>
             </ul>
 
-            <p><strong>서비스 효과</strong></p>
+            <h4>서비스 효과</h4>
             <ul>
                 <li><strong>클러스터링 시간 38% 단축</strong>  
-                    (43.5분 → 27분) → 허브 출차 시각을 앞당겨 전체 SLA 안정성 향상.
+                    <br>43.5분 → 27분 (허브 출차 시각 개선)
                 </li>
                 <li><strong>평균 배송지 간 거리 15% 감소</strong>  
-                    (130.19m → 110.15m) → 더 조밀한 클러스터 형성, 기사 이동 효율 증가.
+                    <br>130.19m → 110.15m (클러스터 밀집도 상승)
                 </li>
-                <li><strong>주말 실물 운영 데이터(약 1.2만 건) 기반 검증</strong>  
-                    당일배송 운영에서도 안정적으로 적용 가능한 알고리즘으로 확인.
+                <li><strong>운영 데이터 기반 안정성 검증</strong>  
+                    <br>실 운영 1.2만 건 테스트 완료
                 </li>
             </ul>
 
@@ -542,35 +542,53 @@
         <!-- 물량기반 예측 -->
         <div class="project-container">
             <div class="project-details">
-                <h3>물량·지역·요일 기반 지역별 최대 배송량(MAX) 예측 ML모델: Delivery MAX Predictor Pipeline <span class="emoji">📊</span></h3>
+                <h3>물량·지역·요일 기반 지역별 최대 배송량(MAX) 예측 ML모델: Delivery MAX Predictor <span class="emoji">📊</span></h3>
 
                 <p><strong>서비스 기능</strong></p>
                 <ul>
                     <li>Holistics BI 툴 API 데이터 기반으로 <strong>물량·지역·요일에 따른 총 배송 소요시간 예측</strong></li>
-                    <li>지역별 가용시간(Time Availability)과 예측값을 활용하여 <strong>운영 가능한 MAX 배송량 자동 산출</strong>.</li>
-                    <li>스케줄(기사 타입별 근무 여부) 기반으로 <strong>YELLOW/ RAINBOW / ORANGE / WHITE 기사별 MAX 값 자동 분배</strong>.</li>
-                    <li>출력 결과는 <strong>Google Sheets에 자동 업데이트</strong>되어 운영팀이 매일 즉시 활용.</li>
+                    <li>지역별 가용시간과 예측값을 활용하여 <strong>운영 가능한 최대 배송량 자동 산출</strong>.</li>
+                    <li>기사 스케줄 기반으로 <strong>고정/FLEX 기사별 MAX 값 자동 분배</strong>.</li>
+                    <li>출력 결과는 <strong>Google Sheets에 자동 업데이트</strong>되어 운영팀이 매일 즉시 활용</li>
                 </ul>
 
-                <p><strong>핵심 구현 프로세스</strong></p>
+                <h4>핵심 구현 프로세스</h4>
                 <ul>
-                    <li><strong>1) 데이터 수집</strong> — Holistics BI에서 모델 학습·가용시간·물량·스케줄 데이터 API로 POST.</li>
-                    <li><strong>2) 모델 학습(LightGBM)</strong> — 지역, 요일, 물량 → 총 배송 소요시간 예측.</li>
-                    <li><strong>3) 가용시간 결합</strong> — 지역·요일 기준 median 작업시간 산출(IQR 이상치 제거 포함).</li>
-                    <li><strong>4) MAX 계산</strong> — 예측된 건당 소요시간 기반으로 기사 타입별 배송량 계산.</li>
-                    <li><strong>5) Google Sheets 업데이트</strong> — 운영팀이 사용하는 Sheet에 자동 반영.</li>
+                    <li>
+                        <strong>1) 데이터 수집</strong><br>
+                        Holistics BI API로 모델 학습·가용시간·물량·스케줄 데이터 로딩
+                    </li>
+                    <li>
+                        <strong>2) 모델 학습(LightGBM)</strong><br>
+                        지역 · 요일 · 물량 → 총 배송 소요시간 예측
+                    </li>
+                    <li>
+                        <strong>3) 가용시간 결합</strong><br>
+                        지역·요일 기준 median 작업시간 산출(IQR 기반 이상치 제거)
+                    </li>
+                    <li>
+                        <strong>4) MAX 계산</strong><br>
+                        예측된 건당 소요시간을 바탕으로 기사 타입별 배송 가능량 계산
+                    </li>
+                    <li>
+                        <strong>5) Google Sheets 업데이트</strong><br>
+                        최종 결과를 운영팀용 Sheet에 자동 반영
+                    </li>
                 </ul>
 
-                <p><strong>서비스 효과</strong></p>
+                <h4>서비스 효과</h4>
                 <ul>
-                    <li><strong>운영 의사결정 자동화</strong>  
-                        지역별 물량·패턴을 고려하지 못한 휴리스틱 기반 판단에서 벗어나, 데이터 기반의 일관된 의사결정이 가능해짐.
+                    <li>
+                        <strong>운영 의사결정 자동화</strong><br>
+                        휴리스틱 기반 판단에서 벗어나, 물량·지역·요일 패턴을 반영한 데이터 기반 의사결정 체계 구축
                     </li>
-                    <li><strong>SLA 안정성 향상</strong>  
-                        불규칙한 물량 증감에도 기사 타입별 적정 배송량을 즉시 산출할 수 있음.
+                    <li>
+                        <strong>SLA 안정성 향상</strong><br>
+                        변동성이 큰 물량에도 기사 타입별 적정 작업량을 즉시 산출하여 안정적 운영 지원
                     </li>
-                    <li><strong>재학습 기반 성능 향상</strong>  
-                        매일 데이터에 기반해 모델이 업데이트되어 계절성·특수일 변화에 강함.
+                    <li>
+                        <strong>재학습 기반 성능 향상</strong><br>
+                        매일 축적되는 실데이터로 모델이 지속 업데이트되어 계절성·특수일에 대응력 강화
                     </li>
                 </ul>
 
