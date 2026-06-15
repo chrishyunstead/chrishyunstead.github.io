@@ -467,11 +467,33 @@
         }
 
         .bootcamp-card {
+            display: flex;
+            flex-direction: column;
             border: 1px solid var(--line);
             border-radius: 16px;
-            padding: 18px;
+            overflow: hidden;
             background: #fff;
             scroll-margin-top: 32px;
+        }
+
+        .bootcamp-card > a {
+            border-bottom: none;
+        }
+
+        .bootcamp-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background: var(--soft);
+            border-bottom: 1px solid var(--line);
+            display: block;
+        }
+
+        .bootcamp-card-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .bootcamp-card h3 {
@@ -482,6 +504,10 @@
         .bootcamp-card p {
             color: #4b5563;
             font-size: 14px;
+        }
+
+        .bootcamp-card .project-link-row {
+            margin-top: auto;
         }
 
         footer {
@@ -787,36 +813,57 @@
 
         <div class="bootcamp-grid">
             <div class="bootcamp-card" id="bootcamp-busan">
-                <h3>부산항 입항 외국인 선원 대상 마케팅 인사이트 제공</h3>
-                <p>물동량과 체류시간 연관분석, 선용품 크롤링/워드클라우드, 부산 관광·숙박·맛집 지도 시각화를 수행했습니다.</p>
-                <div class="badge-list">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Pandas</span>
-                    <span class="tech-badge">Visualization</span>
+                <a href="https://github.com/chrishyunstead/first_project" target="_blank">
+                    <img src="https://github.com/Kshi0219/Adios/assets/149676714/0505755b-91f5-4f97-a42b-860c0aadd829" alt="부산항 입항 외국인 선원 대상 마케팅 인사이트 프로젝트 썸네일">
+                </a>
+                <div class="bootcamp-card-body">
+                    <h3>부산항 입항 외국인 선원 대상 마케팅 인사이트 제공</h3>
+                    <p>물동량과 체류시간 연관분석, 선용품 크롤링/워드클라우드, 부산 관광·숙박·맛집 지도 시각화를 수행했습니다.</p>
+                    <div class="badge-list">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">Visualization</span>
+                    </div>
+                    <div class="project-link-row">
+                        <a class="pill-link" href="https://github.com/chrishyunstead/first_project" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <p><a href="https://github.com/chrishyunstead/first_project" target="_blank">View on GitHub</a></p>
             </div>
 
             <div class="bootcamp-card" id="bootcamp-oof">
-                <h3>OOF(Oracle of Football) 플랫폼 구축</h3>
-                <p>유럽 축구 데이터를 활용해 선수 속성 예측, 유사 선수 조회, Market Value 예측, 승부 예측 모델을 구현했습니다.</p>
-                <div class="badge-list">
-                    <span class="tech-badge">Scikit-learn</span>
-                    <span class="tech-badge">TensorFlow</span>
-                    <span class="tech-badge">Keras</span>
+                <a href="https://github.com/chrishyunstead/second_project" target="_blank">
+                    <img src="OOF_배경화면.jpg" alt="OOF Oracle of Football 프로젝트 썸네일">
+                </a>
+                <div class="bootcamp-card-body">
+                    <h3>OOF(Oracle of Football) 플랫폼 구축</h3>
+                    <p>유럽 축구 데이터를 활용해 선수 속성 예측, 유사 선수 조회, Market Value 예측, 승부 예측 모델을 구현했습니다.</p>
+                    <div class="badge-list">
+                        <span class="tech-badge">Scikit-learn</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">Keras</span>
+                    </div>
+                    <div class="project-link-row">
+                        <a class="pill-link" href="https://github.com/chrishyunstead/second_project" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <p><a href="https://github.com/chrishyunstead/second_project" target="_blank">View on GitHub</a></p>
             </div>
 
             <div class="bootcamp-card" id="bootcamp-football-agora">
-                <h3>Football Agora Project</h3>
-                <p>Django 기반 풋살 매칭 플랫폼을 개발하고, FastAPI를 활용해 챗봇 모델 서빙 및 AWS RDS 연동을 경험했습니다.</p>
-                <div class="badge-list">
-                    <span class="tech-badge">Django</span>
-                    <span class="tech-badge">FastAPI</span>
-                    <span class="tech-badge">AWS RDS</span>
+                <a href="https://github.com/chrishyunstead/Final_project" target="_blank">
+                    <img src="https://capsule-render.vercel.app/api?type=venom&height=300&text=Football%20Agora&fontSize=90&color=0:29DF8D,100:00693B&stroke=00693B" alt="Football Agora 프로젝트 썸네일">
+                </a>
+                <div class="bootcamp-card-body">
+                    <h3>Football Agora Project</h3>
+                    <p>Django 기반 풋살 매칭 플랫폼을 개발하고, FastAPI를 활용해 챗봇 모델 서빙 및 AWS RDS 연동을 경험했습니다.</p>
+                    <div class="badge-list">
+                        <span class="tech-badge">Django</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">AWS RDS</span>
+                    </div>
+                    <div class="project-link-row">
+                        <a class="pill-link" href="https://github.com/chrishyunstead/Final_project" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <p><a href="https://github.com/chrishyunstead/Final_project" target="_blank">View on GitHub</a></p>
             </div>
         </div>
     </section>
@@ -862,7 +909,7 @@
 
                 <div class="project-link-row">
                     <a class="pill-link" href="https://github.com/chrishyunstead/Delivus_Clustering.git" target="_blank">GitHub</a>
-                    <a class="pill-link" href="https://www.notion.so/Postalcode_Clustering-e9310ba7cd9744a8909259a895bcdd43?source=copy_link" target="_blank">Technical Note</a>
+                    <a class="pill-link" href="https://www.notion.so/Postalcode_Clustering-e9310ba7cd9744a8909259a895bcdd43?source=copy_link" target="_blank">Notion 상세 문서</a>
                 </div>
             </div>
 
@@ -909,7 +956,7 @@
 
                 <div class="project-link-row">
                     <a class="pill-link" href="https://github.com/chrishyunstead/Max_deli_portfolio" target="_blank">GitHub</a>
-                    <a class="pill-link" href="https://www.notion.so/fcca30310a6e4e28843aa633c5d5273a?source=copy_link" target="_blank">Technical Note</a>
+                    <a class="pill-link" href="https://www.notion.so/fcca30310a6e4e28843aa633c5d5273a?source=copy_link" target="_blank">Notion 상세 문서</a>
                 </div>
             </div>
 
@@ -959,7 +1006,7 @@
                     <a class="pill-link" href="https://github.com/chrishyunstead/route_optimization.git" target="_blank">Route Optimization</a>
                     <a class="pill-link" href="https://github.com/chrishyunstead/Tasu-Predict-model" target="_blank">Tasu Model</a>
                     <a class="pill-link" href="https://github.com/chrishyunstead/Tasu-ETA" target="_blank">ETA Lambda</a>
-                    <a class="pill-link" href="https://www.notion.so/Route-Optimization-Project-2f64e2161cb0803e95fadbd0916c9162?source=copy_link" target="_blank">Technical Note</a>
+                    <a class="pill-link" href="https://www.notion.so/Route-Optimization-Project-2f64e2161cb0803e95fadbd0916c9162?source=copy_link" target="_blank">Notion 상세 문서</a>
                 </div>
             </div>
 
